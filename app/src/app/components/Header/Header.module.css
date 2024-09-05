@@ -1,0 +1,57 @@
+/* styles/Header.module.css */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .navbarScrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbarVisible {
+    opacity: 1;
+  }
+  
+  .navbarHidden {
+    opacity: 0;
+  }
+  
+  .navLogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navLogoScrolled {
+    color: #333;
+  }
+  
+  .navLogoDefault {
+    color: #fff;
+  }
+  
+  .menuIcon {
+    background-color: #E07B39;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menuIconScrolled {
+    background-color: #333;
+  }
+
+  .menuIcon,
+.menuIconScrolled {
+  width: 24px;
+  height: 2px;
+  background-color: #E07B39;
+  transition: background-color 0.3s ease;
+}
+  

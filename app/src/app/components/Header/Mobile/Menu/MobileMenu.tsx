@@ -39,7 +39,7 @@ export default function MobileMenu({ opened, setOpened }: MobileMenuProps) {
       }`}
     >
       {/* Timeline de navigation */}
-      <div className="flex flex-wrap justify-center items-center space-x-2 mb-4">
+      <div className="flex flex-wrap justify-center items-center space-x-2 mb-4 mt-8">
         <button
           onClick={handleMenuReset}
           className={`text-sm transition ${
@@ -65,7 +65,7 @@ export default function MobileMenu({ opened, setOpened }: MobileMenuProps) {
 
       {/* Menu principal */}
       {!activeMenu && (
-        <ul className="flex flex-col justify-center space-y-6 text-white text-lg">
+        <ul className="flex flex-col justify-center space-y-8 text-white text-lg py-8">
           <ItemMenu text="DÉCOUVRIR LE CONGO" href="/" onClick={() => setOpened(false)} />
           <ItemMenu
             text="DESTINATIONS"

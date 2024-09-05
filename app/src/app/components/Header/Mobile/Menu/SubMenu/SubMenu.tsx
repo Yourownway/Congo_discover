@@ -46,7 +46,62 @@ export default function SubMenu({
           </ul>
         </div>
       )}
-
+          {activeMenu === "EXPÉRIENCES" && (
+        <div className="animate-slide-in">
+          <div
+            className="flex items-center cursor-pointer text-white mb-4 transition-transform duration-500 ease-out"
+            onClick={() => onBack(menuHistory.length - 2)}
+          >
+               {/* @ts-ignore*/}   
+            <BsArrowLeft className="mr-2" /> EXPÉRIENCES
+          </div>
+          <ul className="flex flex-col justify-center space-y-4 text-white text-lg">
+            <ItemMenu
+              text="EXPÉRIENCE NATURE"
+              href="/experiences/nature"
+              onClick={() => setOpened(false)}
+            />
+            <ItemMenu
+              text="EXPÉRIENCE CULTURELLE"
+              href="/experiences/culture"
+              onClick={() => setOpened(false)}
+            />
+            <ItemMenu
+              text="EXPÉRIENCE AVENTURE"
+              href="/experiences/aventure"
+              onClick={() => setOpened(false)}
+            />
+          </ul>
+        </div>
+      )}
+     {activeMenu === "IDÉES DE VOYAGE" && (
+        <div className="animate-slide-in">
+          <div
+            className="flex items-center cursor-pointer text-white mb-4 transition-transform duration-500 ease-out"
+            onClick={() => onBack(menuHistory.length - 2)}
+          >
+                {/* @ts-ignore*/}     
+            <BsArrowLeft className="mr-2" /> IDÉES DE VOYAGE
+          </div>
+          <ul className="flex flex-col justify-center space-y-4 text-white text-lg">
+            <ItemMenu
+              text="TOUR DÉCOUVERTE"
+              href="/idees-voyage/decouverte"
+              onClick={() => setOpened(false)}
+            />
+            <ItemMenu
+              text="CIRCUITS HISTORIQUES"
+              href="/idees-voyage/historiques"
+              onClick={() => setOpened(false)}
+            />
+            <ItemMenu
+              text="SÉJOUR GASTRONOMIQUE"
+              href="/idees-voyage/gastronomique"
+              onClick={() => setOpened(false)}
+            />
+          </ul>
+        </div>
+      )}
       {/* Sous-menus pour chaque ville */}
       {activeMenu === "KINSHASA" && (
         <div className="animate-slide-in">
@@ -95,7 +150,7 @@ export default function SubMenu({
           <ul className="flex flex-col justify-center space-y-4 text-white text-lg">
             <ItemMenu
               text="MUSÉES ET GALERIES D&apos;ART"
-              href={`/destinations/kinshasa/culture#musees-et-galeries-dart`}
+              href={`/destinations/kinshasa/culture`}
               onClick={() => setOpened(false)}
             />
             <ItemMenu
@@ -165,7 +220,7 @@ export default function SubMenu({
           <ul className="flex flex-col justify-center space-y-4 text-white text-lg">
             <ItemMenu
               text="MUSÉES ET GALERIES D&apos;ART"
-              href={`/destinations/goma/culture#musees-et-galeries-dart`}
+              href={`/destinations/goma/culture`}
               onClick={() => setOpened(false)}
             />
             <ItemMenu
@@ -235,7 +290,7 @@ export default function SubMenu({
           <ul className="flex flex-col justify-center space-y-4 text-white text-lg">
             <ItemMenu
               text="MUSÉES ET GALERIES D&apos;ART"
-              href={`/destinations/lubumbashi/culture#musees-et-galeries-dart`}
+              href={`/destinations/lubumbashi/culture`}
               onClick={() => setOpened(false)}
             />
             <ItemMenu
